@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Mobile-first base ─── */
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body { background: #fafaf8; color: #0a0a0a; font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #fafaf8; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
+
+/* ─── Date input ─── */
+input[type="date"] { color-scheme: light; }
+
+/* ─── Hide scrollbar utility ─── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─── Safe area for iOS notch ─── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* ─── Smooth image loading ─── */
+img { display: block; max-width: 100%; }
